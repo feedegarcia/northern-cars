@@ -593,7 +593,7 @@ html.lock,body.lock{overflow:hidden}
   var RATE = 1500, rateInfo = null;
   var usd = function(c){ return c.cur === 'ARS' ? c.price / RATE : c.price; };
   var money = function(c){ return (c.cur === 'ARS' ? '$ ' : 'USD ') + fmt(c.price); };
-  var B = { p:[0,150000,5000], y:[2011,2026,1], k:[0,160000,5000] };
+  var B = { p:[0,150000,5000], y:[2008,2026,1], k:[0,160000,5000] };
   cars.forEach(function(c){ c.trans = c.det ? c.det.k[4] : null; c.fuel = c.det ? c.det.k[2] : null; });
   var FACETS = [['brands','Marca','brand','list'], ['types','Tipo de carrocería','tag','list'], ['trans','Transmisión','trans','pill'], ['fuel','Combustible','fuel','pill']];
   var newState = function(){ return { q:'', brands:[], types:[], trans:[], fuel:[], plo:B.p[0], phi:B.p[1], ylo:B.y[0], yhi:B.y[1], klo:B.k[0], khi:B.k[1], sort:'price-desc' }; };
